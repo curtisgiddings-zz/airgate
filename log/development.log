@@ -2576,3 +2576,956 @@ Served asset /jquery.js - 304 Not Modified (2ms)
 
 Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 03:18:56 -0400
 Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-08 03:28:19 -0400
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 03:28:23 -0400
+Processing by SurveysController#index as HTML
+  [1m[35mSurvey Load (0.3ms)[0m  SELECT "surveys".* FROM "surveys" 
+  Rendered surveys/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:23 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:23 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:23 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:23 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:23 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started DELETE "/surveys/2" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0VqcHF3HhA4V5k5hQjzo1VkGVIZhmQnd42E2VpDXdm4=", "id"=>"2"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 2[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "surveys" WHERE "surveys"."id" = ?  [["id", 2]]
+  [1m[36m (146.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 156ms (ActiveRecord: 147.7ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Processing by SurveysController#index as HTML
+  [1m[35mSurvey Load (0.2ms)[0m  SELECT "surveys".* FROM "surveys" 
+  Rendered surveys/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:31 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/3/edit" for 127.0.0.1 at 2013-04-08 03:28:33 -0400
+Processing by SurveysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 3
+  Rendered surveys/_form.html.erb (6.3ms)
+  Rendered surveys/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:33 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:33 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:33 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:33 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:33 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/surveys/3" for 127.0.0.1 at 2013-04-08 03:28:36 -0400
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 3
+  Rendered surveys/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 56ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:36 -0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:36 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:36 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:36 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 03:28:36 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 03:28:36 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-08 16:29:36 -0400
+Served asset /rails.png - 304 Not Modified (5ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 16:29:39 -0400
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  Rendered surveys/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 602ms (Views: 250.4ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:29:40 -0400
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 16:29:40 -0400
+Served asset /surveys.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:40 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:40 -0400
+Served asset /surveys.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:40 -0400
+Served asset /application.js - 304 Not Modified (43ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 16:29:42 -0400
+Processing by SurveysController#new as HTML
+  Rendered surveys/_form.html.erb (25.7ms)
+  Rendered surveys/new.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 241ms (Views: 77.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 16:29:42 -0400
+Served asset /surveys.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:42 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:29:42 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:42 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:42 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2013-04-08 16:29:56 -0400
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "survey"=>{"name"=>"Starbucks 2", "questions_attributes"=>{"0"=>{"content"=>"Fuck you."}, "1"=>{"content"=>"Anally?"}, "2"=>{"content"=>"Lube?"}}}, "commit"=>"Create Survey"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (61.0ms)[0m  [1mINSERT INTO "surveys" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00], ["name", "Starbucks 2"], ["updated_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00]]
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "questions" ("content", "created_at", "survey_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Fuck you."], ["created_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00], ["survey_id", 4], ["updated_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "questions" ("content", "created_at", "survey_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Anally?"], ["created_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00], ["survey_id", 4], ["updated_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("content", "created_at", "survey_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Lube?"], ["created_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00], ["survey_id", 4], ["updated_at", Mon, 08 Apr 2013 20:29:56 UTC +00:00]]
+  [1m[36m (146.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/surveys/4
+Completed 302 Found in 239ms (ActiveRecord: 208.9ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2013-04-08 16:29:56 -0400
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSurvey Load (0.3ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 4[0m
+  Rendered surveys/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:56 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:29:57 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 16:33:26 -0400
+Processing by SurveysController#index as HTML
+  [1m[35mSurvey Load (0.4ms)[0m  SELECT "surveys".* FROM "surveys" 
+  Rendered surveys/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:33:26 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 16:33:26 -0400
+Served asset /surveys.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 16:33:26 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:33:26 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:33:26 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:33:26 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSurveys (20130407035132)
+Migrating to CreateQuestions (20130407041517)
+Migrating to AddTypeColumnToQuestions (20130408205112)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "questions" ADD "type" integer
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130408205112')[0m
+  [1m[35m (135.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSurveys (20130407035132)
+Migrating to CreateQuestions (20130407041517)
+Migrating to AddTypeColumnToQuestions (20130408205112)
+Migrating to CreateAnswers (20130408205957)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "content" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130408205957')[0m
+  [1m[35m (144.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-08 17:15:28 -0400
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 17:15:30 -0400
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  Rendered surveys/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 164ms (Views: 97.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 17:15:30 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 17:15:30 -0400
+Served asset /surveys.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 17:15:30 -0400
+Served asset /surveys.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 17:15:30 -0400
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 17:15:30 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 17:15:30 -0400
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 17:15:33 -0400
+Processing by SurveysController#new as HTML
+Completed 500 Internal Server Error in 51ms
+
+SyntaxError (/home/whinub/website/airgate/app/models/question.rb:2: syntax error, unexpected ':', expecting keyword_end
+  attr_accessible :content, :type :survey_id
+                                   ^):
+  app/controllers/surveys_controller.rb:28:in `block in new'
+  app/controllers/surveys_controller.rb:28:in `times'
+  app/controllers/surveys_controller.rb:28:in `new'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.5ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 17:16:04 -0400
+Processing by SurveysController#new as HTML
+Completed 500 Internal Server Error in 14ms
+
+ArgumentError (No association found for name `answers'. Has it been defined yet?):
+  app/models/question.rb:5:in `<class:Question>'
+  app/models/question.rb:1:in `<top (required)>'
+  app/controllers/surveys_controller.rb:28:in `block in new'
+  app/controllers/surveys_controller.rb:28:in `times'
+  app/controllers/surveys_controller.rb:28:in `new'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 17:16:06 -0400
+Processing by SurveysController#new as HTML
+Completed 500 Internal Server Error in 5ms
+
+ArgumentError (No association found for name `answers'. Has it been defined yet?):
+  app/models/question.rb:5:in `<class:Question>'
+  app/models/question.rb:1:in `<top (required)>'
+  app/controllers/surveys_controller.rb:28:in `block in new'
+  app/controllers/surveys_controller.rb:28:in `times'
+  app/controllers/surveys_controller.rb:28:in `new'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 17:16:07 -0400
+Processing by SurveysController#new as HTML
+Completed 500 Internal Server Error in 5ms
+
+ArgumentError (No association found for name `answers'. Has it been defined yet?):
+  app/models/question.rb:5:in `<class:Question>'
+  app/models/question.rb:1:in `<top (required)>'
+  app/controllers/surveys_controller.rb:28:in `block in new'
+  app/controllers/surveys_controller.rb:28:in `times'
+  app/controllers/surveys_controller.rb:28:in `new'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 17:16:32 -0400
+Processing by SurveysController#new as HTML
+  Rendered surveys/_form.html.erb (12.6ms)
+  Rendered surveys/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 132ms (Views: 67.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 17:16:33 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 17:16:33 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 17:16:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 17:16:33 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 17:16:33 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 17:16:33 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 18:11:49 -0400
+Processing by SurveysController#index as HTML
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" 
+  Rendered surveys/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 65ms (Views: 55.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:11:49 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:11:49 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:11:49 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:11:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:11:49 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:11:49 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/surveys/1" for 127.0.0.1 at 2013-04-08 18:11:55 -0400
+Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "id"=>"1"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 14ms
+
+ArgumentError (No association found for name `answers'. Has it been defined yet?):
+  app/models/question.rb:5:in `<class:Question>'
+  app/models/question.rb:1:in `<top (required)>'
+  app/controllers/surveys_controller.rb:77:in `destroy'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started DELETE "/surveys/3" for 127.0.0.1 at 2013-04-08 18:12:06 -0400
+Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "id"=>"3"}
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 8ms
+
+ArgumentError (No association found for name `answers'. Has it been defined yet?):
+  app/models/question.rb:5:in `<class:Question>'
+  app/models/question.rb:1:in `<top (required)>'
+  app/controllers/surveys_controller.rb:77:in `destroy'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 18:12:57 -0400
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  Rendered surveys/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 63ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:12:57 -0400
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:12:57 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:12:57 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:12:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:12:57 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:12:57 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/surveys/1" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "id"=>"1"}
+  [1m[35mSurvey Load (0.2ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 1
+  [1m[36mSQL (8.7ms)[0m  [1mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 1]]
+  [1m[35m (164.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 190ms (ActiveRecord: 173.9ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.4ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  Rendered surveys/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 59ms (Views: 55.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:01 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/surveys/3" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "id"=>"3"}
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 3
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = ?  [["id", 2]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "surveys" WHERE "surveys"."id" = ?  [["id", 3]]
+  [1m[36m (148.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 180ms (ActiveRecord: 149.9ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Processing by SurveysController#index as HTML
+  [1m[35mSurvey Load (0.2ms)[0m  SELECT "surveys".* FROM "surveys" 
+  Rendered surveys/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:04 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/surveys/4" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "id"=>"4"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 4[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = ?  [["id", 4]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 5]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = ?  [["id", 6]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 4]]
+  [1m[35m (164.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 175ms (ActiveRecord: 166.2ms)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" [0m
+  Rendered surveys/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:06 -0400
+Served asset /application.js - 304 Not Modified (40ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 18:13:13 -0400
+Processing by SurveysController#new as HTML
+  Rendered surveys/_form.html.erb (5.8ms)
+  Rendered surveys/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:14 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:13:14 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:14 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:14 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:13:14 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2013-04-08 18:14:09 -0400
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "survey"=>{"name"=>"Are you into bondage?", "questions_attributes"=>{"0"=>{"content"=>"Ropes?", "type"=>"3"}, "1"=>{"content"=>"Handcuffs?", "type"=>"3"}, "2"=>{"content"=>"Tape?", "type"=>"1"}}}, "commit"=>"Create Survey"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "surveys" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00], ["name", "Are you into bondage?"], ["updated_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("content", "created_at", "survey_id", "type", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Ropes?"], ["created_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00], ["survey_id", 5], ["type", 3], ["updated_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "questions" ("content", "created_at", "survey_id", "type", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Handcuffs?"], ["created_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00], ["survey_id", 5], ["type", 3], ["updated_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("content", "created_at", "survey_id", "type", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Tape?"], ["created_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00], ["survey_id", 5], ["type", 1], ["updated_at", Mon, 08 Apr 2013 22:14:09 UTC +00:00]]
+  [1m[36m (139.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/surveys/5
+Completed 302 Found in 163ms (ActiveRecord: 142.2ms)
+
+
+Started GET "/surveys/5" for 127.0.0.1 at 2013-04-08 18:14:09 -0400
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSurvey Load (0.3ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 5[0m
+  Rendered surveys/show.html.erb within layouts/application (38.2ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (The single-table inheritance mechanism failed to locate the subclass: '3'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Question.inheritance_column to use another column for that information.):
+    3:   <br>
+    4: 
+    5: <ol>
+    6:   <% for question in @survey.questions %>
+    7:     <li><%= h question.content %></li>
+    8:   <% end %>
+    9: </ol>
+  app/views/surveys/show.html.erb:6:in `_app_views_surveys_show_html_erb__1884933429672514098_70286133355800'
+  app/controllers/surveys_controller.rb:18:in `show'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.9ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2013-04-08 18:15:02 -0400
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "survey"=>{"name"=>"Are you into bondage?", "questions_attributes"=>{"0"=>{"content"=>"Ropes?", "type"=>"1"}, "1"=>{"content"=>"Handcuffs?", "type"=>"1"}, "2"=>{"content"=>"Tape?", "type"=>"1"}}}, "commit"=>"Create Survey"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "surveys" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00], ["name", "Are you into bondage?"], ["updated_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("content", "created_at", "survey_id", "type", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Ropes?"], ["created_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00], ["survey_id", 6], ["type", 1], ["updated_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "questions" ("content", "created_at", "survey_id", "type", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Handcuffs?"], ["created_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00], ["survey_id", 6], ["type", 1], ["updated_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("content", "created_at", "survey_id", "type", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Tape?"], ["created_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00], ["survey_id", 6], ["type", 1], ["updated_at", Mon, 08 Apr 2013 22:15:02 UTC +00:00]]
+  [1m[36m (124.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/surveys/6
+Completed 302 Found in 137ms (ActiveRecord: 126.1ms)
+
+
+Started GET "/surveys/6" for 127.0.0.1 at 2013-04-08 18:15:02 -0400
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSurvey Load (0.1ms)[0m  SELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 6[0m
+  Rendered surveys/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (The single-table inheritance mechanism failed to locate the subclass: '1'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Question.inheritance_column to use another column for that information.):
+    3:   <br>
+    4: 
+    5: <ol>
+    6:   <% for question in @survey.questions %>
+    7:     <li><%= h question.content %></li>
+    8:   <% end %>
+    9: </ol>
+  app/views/surveys/show.html.erb:6:in `_app_views_surveys_show_html_erb__1884933429672514098_70286133355800'
+  app/controllers/surveys_controller.rb:18:in `show'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSurveys (20130407035132)
+Migrating to CreateQuestions (20130407041517)
+Migrating to AddTypeColumnToQuestions (20130408205112)
+Migrating to CreateAnswers (20130408205957)
+Migrating to FixTypeColumnName (20130408223153)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "altered_questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "survey_id" integer, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "question_type" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (7, 5, 'Ropes?', '2013-04-08 22:14:09.535277', '2013-04-08 22:14:09.535277', 3)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (8, 5, 'Handcuffs?', '2013-04-08 22:14:09.537158', '2013-04-08 22:14:09.537158', 3)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (9, 5, 'Tape?', '2013-04-08 22:14:09.538359', '2013-04-08 22:14:09.538359', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (10, 6, 'Ropes?', '2013-04-08 22:15:02.717109', '2013-04-08 22:15:02.717109', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (11, 6, 'Handcuffs?', '2013-04-08 22:15:02.718480', '2013-04-08 22:15:02.718480', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (12, 6, 'Tape?', '2013-04-08 22:15:02.719733', '2013-04-08 22:15:02.719733', 1)[0m
+  [1m[35m (0.8ms)[0m  DROP TABLE "questions"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "survey_id" integer, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "question_type" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_questions"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (7, 5, 'Ropes?', '2013-04-08 22:14:09.535277', '2013-04-08 22:14:09.535277', 3)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (8, 5, 'Handcuffs?', '2013-04-08 22:14:09.537158', '2013-04-08 22:14:09.537158', 3)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (9, 5, 'Tape?', '2013-04-08 22:14:09.538359', '2013-04-08 22:14:09.538359', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (10, 6, 'Ropes?', '2013-04-08 22:15:02.717109', '2013-04-08 22:15:02.717109', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (11, 6, 'Handcuffs?', '2013-04-08 22:15:02.718480', '2013-04-08 22:15:02.718480', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "questions" ("id","survey_id","content","created_at","updated_at","question_type") VALUES (12, 6, 'Tape?', '2013-04-08 22:15:02.719733', '2013-04-08 22:15:02.719733', 1)
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "altered_questions"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130408223153')
+  [1m[36m (129.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 18:34:15 -0400
+Processing by SurveysController#new as HTML
+  Rendered surveys/_form.html.erb (16.4ms)
+  Rendered surveys/new.html.erb within layouts/application (47.1ms)
+Completed 500 Internal Server Error in 230ms
+
+ActionView::Template::Error (undefined method `type' for #<Question:0x007f7208634a80>):
+    19:   <p>
+    20:     <%= builder.label :content, "Question" %><br />
+    21:     <%= builder.text_area :content, :rows => 3 %>
+    22:     <%= builder.select :type, [['Multiple Choice', Question::MULTIPLE_CHOICE], 
+    23:                               ['Short Answer', Question::SHORT_ANSWER], 
+    24:                               ['Long Answer', Question::LONG_ANSWER]] %>
+    25:   </p>
+  app/views/surveys/_form.html.erb:22:in `block (2 levels) in _app_views_surveys__form_html_erb__2882985182887709773_70063869479680'
+  app/views/surveys/_form.html.erb:18:in `block in _app_views_surveys__form_html_erb__2882985182887709773_70063869479680'
+  app/views/surveys/_form.html.erb:1:in `_app_views_surveys__form_html_erb__2882985182887709773_70063869479680'
+  app/views/surveys/new.html.erb:3:in `_app_views_surveys_new_html_erb__3913789544548048572_34397700'
+  app/controllers/surveys_controller.rb:30:in `new'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2013-04-08 18:34:45 -0400
+Processing by SurveysController#new as HTML
+  Rendered surveys/_form.html.erb (6.1ms)
+  Rendered surveys/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:34:45 -0400
+Served asset /surveys.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:34:46 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:34:46 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:34:46 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:34:46 -0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:34:46 -0400
+Served asset /surveys.js - 304 Not Modified (3ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2013-04-08 18:35:23 -0400
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "survey"=>{"name"=>"Starbucks", "questions_attributes"=>{"0"=>{"content"=>"Coffee sucked?", "question_type"=>"1"}, "1"=>{"content"=>"High?", "question_type"=>"3"}, "2"=>{"content"=>"Have you been tested?", "question_type"=>"4"}}}, "commit"=>"Create Survey"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: question_type):
+  app/controllers/surveys_controller.rb:44:in `new'
+  app/controllers/surveys_controller.rb:44:in `create'
+
+
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/whinub/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRQc36RzcShaEm5/KAQBJI/KzhOVwtbj8HVekZLZHwg=", "survey"=>{"name"=>"Starbucks", "questions_attributes"=>{"0"=>{"content"=>"Coffee sucked?", "question_type"=>"1"}, "1"=>{"content"=>"High?", "question_type"=>"3"}, "2"=>{"content"=>"Have you been tested?", "question_type"=>"4"}}}, "commit"=>"Create Survey"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.2ms)[0m  INSERT INTO "surveys" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00], ["name", "Starbucks"], ["updated_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("content", "created_at", "question_type", "survey_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Coffee sucked?"], ["created_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00], ["question_type", 1], ["survey_id", 7], ["updated_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("content", "created_at", "question_type", "survey_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "High?"], ["created_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00], ["question_type", 3], ["survey_id", 7], ["updated_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "questions" ("content", "created_at", "question_type", "survey_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Have you been tested?"], ["created_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00], ["question_type", 4], ["survey_id", 7], ["updated_at", Mon, 08 Apr 2013 22:35:38 UTC +00:00]]
+  [1m[35m (121.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/surveys/7
+Completed 302 Found in 199ms (ActiveRecord: 130.0ms)
+
+
+Started GET "/surveys/7" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."survey_id" = 7
+  Rendered surveys/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/surveys.css?body=1" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Served asset /surveys.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/surveys.js?body=1" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Served asset /surveys.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 18:35:38 -0400
+Served asset /application.js - 304 Not Modified (1ms)

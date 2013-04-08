@@ -19,6 +19,9 @@
   <p>
     <%= builder.label :content, "Question" %><br />
     <%= builder.text_area :content, :rows => 3 %>
+    <%= builder.select :question_type, [['Multiple Choice', Question::MULTIPLE_CHOICE], 
+                                        ['Short Answer', Question::SHORT_ANSWER], 
+                                        ['Long Answer', Question::LONG_ANSWER]] %>
   </p>
   <% end %>
 
