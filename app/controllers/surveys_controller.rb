@@ -25,7 +25,10 @@ class SurveysController < ApplicationController
   # GET /surveys/new.json
   def new
     @survey = Survey.new
-    3.times { @survey.questions.build }
+    3.times do
+      question = @survey.questions.build
+      4.times { question.answers.build }
+    end
 
     respond_to do |format|
       format.html # new.html.erb
