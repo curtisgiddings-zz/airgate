@@ -13,18 +13,18 @@ class Question < ActiveRecord::Base
   LONG_ANSWER = 4
 
   def is_multiple_choice?
-  	self.type == 1
+  	self.type == MULTIPLE_CHOICE
   end
 
   def is_checklist?
-  	self.type == 2
+  	self.type == CHECKLIST
   end
 
   def is_short_answer?
-  	self.type == 3
+  	self.type == SHORT_ANSWER
   end
 
   def is_long_answer?
-  	self.type == 4
+  	self.type == LONG_ANSWER
   end
 end
