@@ -3,14 +3,17 @@
   <br>
 
 <ol>
-  <% for question in @survey.questions %>
+  <% @survey.questions.each do |question| %>
     <li><%= h question.content %></li>
     <ul>
-    <%for answer in question.answers %>
-      <li><%=h answer.content %></li>
+    <%if question.is_multiple_choice? %>
+      <%question.answers.each do |answer| %>
+        <li><%=h answer.content %></li>
+      <%end%>
     <%end%>
 	</ul>
   <% end %>
+
 </ol>
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
