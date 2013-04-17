@@ -3,18 +3,28 @@
   <br>
 
 <ol>
-  <% @survey.questions.each do |question| %>
-    <li><%= h question.content %></li>
-    <ul>
-    <%if question.is_multiple_choice? %>
-      <%question.answers.each do |answer| %>
-        <li><%=h answer.content %></li>
-      <%end%>
-    <%end%>
-	</ul>
+  <%=semantic_form_for @survey do|f| %>
+    <% @questions.each do |question| %>
+        <%question.answers.each do |answer| %>
+          <% @answers << answer.content %>
+        <%end%>
+        <li><%= h question.content %></li>
+        <%= f.semantic_fields_for :responses, @survey.responses.build do |response| %>
+          <ul>
+              <%if question.is_multiple_choice? %>
+                <%=response.input :content, :as => :radio, 
+                                  :collection =>@answers%>
+              <%elsif question.is_short_answer? %>
+                <%=response.text_field :content%>
+              <%elsif question.is_long_answer? %>
+                <%=response.text_area :content, :size => "30x12"%>
+              <%end%>      
+	        </ul>
+          <%=response.hidden_field :question_id, :value => question.id%>
+        <%end%>
+     <%end %>
+    <%= f.submit "Complete Survey" %>
   <% end %>
-
 </ol>
-
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
 <%= link_to 'Back', surveys_path %>

@@ -2,10 +2,10 @@ class Question < ActiveRecord::Base
   attr_accessible :content, :question_type, :survey_id,  :answers_attributes
   belongs_to :survey
   has_many :answers, :dependent => :destroy
-  validates :content, presence: true
+  has_many :responses, :dependent => :destroy
   accepts_nested_attributes_for :answers, 
   								:reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
-
+  validates :content, presence: true
   #Constants corresponding to question type.
   MULTIPLE_CHOICE = 1
   CHECKLIST = 2

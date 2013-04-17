@@ -1,0 +1,10 @@
+<%if @question.is_multiple_choice? %>
+  <%@question.answers.each do |answer| %>
+   <%=response.radio_button :content, answer.content %>
+   <%=response.label( :content, answer.content )%>
+  <%end%>
+<%elsif @question.is_short_answer? %>
+  <%=response.text_field :content%>
+<%elsif @question.is_long_answer? %>
+  <%=response.text_area :content, :size => "30x12"%>
+<%end%>

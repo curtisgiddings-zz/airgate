@@ -14,12 +14,14 @@
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
+
   </p>
   
-  <%= f.link_to_add "Add a Question", :questions %>
+  
   <%= f.fields_for :questions%>
 
   <div class="actions">
+    <%= f.link_to_add "Add a Question", :questions %> <br>
     <%= f.submit %>
   </div>
 <% end %>

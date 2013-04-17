@@ -1,11 +1,13 @@
 Airgate::Application.routes.draw do
   resources :surveys
+  resources :responses
   get "surveys/new"
   get "surveys/show"
   get "surveys/index"
   get "surveys/create"
   get "surveys/edit"
   get "surveys/update"
+  root :to => "surveys#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
