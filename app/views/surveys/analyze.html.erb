@@ -1,0 +1,7 @@
+<h1>Testing Routing </h1>
+<%= @survey.name %>
+<% @questions.each do |question| %>
+  <%= question.content %>
+  <%= question.responses.count(:group => "content").to_json %>
+
+ <%end%>

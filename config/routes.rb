@@ -1,6 +1,7 @@
 Airgate::Application.routes.draw do
   resources :surveys
   resources :responses
+  match 'surveys/:id/analyze' => "surveys#analyze"
   get "surveys/new"
   get "surveys/show"
   get "surveys/index"
