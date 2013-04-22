@@ -1,7 +1,25 @@
-<h1>Testing Routing </h1>
 <%= @survey.name %>
 <% @questions.each do |question| %>
-  <%= question.content %>
-  <%= question.responses.count(:group => "content").to_json %>
+  <h2> <%= question.content %> </h2>
+   <%if question.is_multiple_choice?%>
+     <%@data = question.responses.count(:group => "content")%>
+     <br>
+     <div id="chart_<%=question.content%>" style="height: 250px;"></div>
+     <br>
+     <script type="text/javascript">
+     new Morris.Donut({
+       // ID of the element in which to draw the chart.
+       element: 'chart_<%=question.content%>',
+       // Chart data records -- each entry in this array corresponds to a point on
+       // the chart.
+       data: [
+       	<%@data.each do |datum| %>
+         { label: '<%=datum[0]%>', value: <%=datum[1]%> },
+         <%end %>
+       ],
+      
+     });
 
- <%end%>
+     </script>
+   <%end%>
+<%end%>
