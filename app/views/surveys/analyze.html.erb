@@ -1,22 +1,25 @@
 <%= @survey.name %>
 <% @questions.each do |question| %>
   <h2> <%= question.content %> </h2>
-   <%if question.is_multiple_choice?%>
+   <%if question.is_multiple_choice? || question.is_checklist?%>
      <%@data = question.responses.count(:group => "content")%>
      <br>
      <div id="chart_<%=question.content%>" style="height: 250px;"></div>
      <br>
      <script type="text/javascript">
-     new Morris.Donut({
+     new Morris.Bar({
        // ID of the element in which to draw the chart.
        element: 'chart_<%=question.content%>',
        // Chart data records -- each entry in this array corresponds to a point on
        // the chart.
        data: [
        	<%@data.each do |datum| %>
-         { label: '<%=datum[0]%>', value: <%=datum[1]%> },
+         { x: '<%=datum[0]%>', y: <%=datum[1]%> },
          <%end %>
        ],
+       xkey: 'x',
+       ykeys: 'y',
+       labels:['Number of Responses']
       
      });
 

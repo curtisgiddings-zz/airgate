@@ -18,6 +18,11 @@
                 <%=response.text_field :content%>
               <%elsif question.is_long_answer? %>
                 <%=response.text_area :content, :size => "30x12"%>
+              <%elsif question.is_checklist? %>
+                <%=response.input :content, :as => :check_boxes,
+                                  :collection => @answers %>
+              <%elsif question.is_email? %>
+              <%=response.input :content, :as => :email %>
               <%end%>      
 	        </ul>
           <%=response.hidden_field :question_id, :value => question.id%>

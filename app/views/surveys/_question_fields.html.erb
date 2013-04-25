@@ -3,7 +3,10 @@
   <%= f.text_area :content, :rows => 3 %><br>
       <%= f.select :question_type, [['Multiple Choice', Question::MULTIPLE_CHOICE], 
                                     ['Short Answer', Question::SHORT_ANSWER], 
-                                    ['Long Answer', Question::LONG_ANSWER]] %><br>
+                                    ['Long Answer', Question::LONG_ANSWER],
+                                    ['Check List', Question::CHECKLIST],
+                                    ['E-mail', Question::EMAIL]] %>
+                                    <br>
   <%= f.link_to_remove "Remove Question" %>
 </p>
 <%= f.fields_for :answers%>

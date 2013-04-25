@@ -11,6 +11,8 @@ class Question < ActiveRecord::Base
   CHECKLIST = 2
   SHORT_ANSWER = 3
   LONG_ANSWER = 4
+  EMAIL = 5
+
 
   def is_multiple_choice?
   	self.question_type == MULTIPLE_CHOICE
@@ -26,5 +28,9 @@ class Question < ActiveRecord::Base
 
   def is_long_answer?
   	self.question_type == LONG_ANSWER
+  end
+
+  def is_email?
+    self.question_type == EMAIL
   end
 end
