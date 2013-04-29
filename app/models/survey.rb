@@ -5,6 +5,7 @@ class Survey < ActiveRecord::Base
   accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   accepts_nested_attributes_for :responses, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   validates :name, presence: true
+  belongs_to :user
 
   #Constants corresponding to router type.
   DDWRT = 1

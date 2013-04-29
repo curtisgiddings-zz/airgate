@@ -54,7 +54,7 @@ class SurveysController < ApplicationController
   # POST /surveys.json
   def create
     @survey = Survey.new(params[:survey])
-
+    @survey.user = current_user
     respond_to do |format|
       if @survey.save
         format.html { redirect_to @survey, notice: 'Survey was successfully created.' }
