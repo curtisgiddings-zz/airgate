@@ -6,6 +6,10 @@ gem 'formtastic'
 gem 'morrisjs-rails'
 gem 'raphael-rails'
 gem 'devise'
+gem 'bootstrap-sass', '~> 2.3.1.1'
+gem 'bootswatch-rails'
+#gem 'formtastic'
+gem 'formtastic-bootstrap'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

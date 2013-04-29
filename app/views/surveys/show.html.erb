@@ -3,7 +3,7 @@
   <br>
 
 <ol>
-  <%=semantic_form_for @survey do|f| %>
+  <%=semantic_form_for @survey do |f| %>
     <% @questions.each do |question| %>
         <%question.answers.each do |answer| %>
           <% @answers << answer.content %>
@@ -22,13 +22,14 @@
                 <%=response.input :content, :as => :check_boxes,
                                   :collection => @answers %>
               <%elsif question.is_email? %>
-              <%=response.input :content, :as => :email %>
+                <%=response.input :content, :as => :email %>
               <%end%>      
 	        </ul>
           <%=response.hidden_field :question_id, :value => question.id%>
+          <% @answers.clear %>
         <%end%>
      <%end %>
-    <%= f.submit "Complete Survey" %>
+    <%= f.submit "Continue to Internet" %>
   <% end %>
 </ol>
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
