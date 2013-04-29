@@ -5,6 +5,7 @@ gem 'nested_form'
 gem 'formtastic'
 gem 'morrisjs-rails'
 gem 'raphael-rails'
+gem 'devise'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
