@@ -1,8 +1,12 @@
 Airgate::Application.routes.draw do
   devise_for :users
 
-  resources :surveys
-  match 'surveys/:id/analyze' => "surveys#analyze"
+  resources :surveys do 
+    member do
+      get 'analyze'
+    end
+  end
+  
   get "surveys/new"
   get "surveys/show"
   get "surveys/index"

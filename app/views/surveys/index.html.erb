@@ -12,7 +12,9 @@
     <td><h2><%=survey.name%></h2></td>
     <td><%= link_to 'Show', survey %></td>
     <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
+    <td><%= link_to 'Analyze', analyze_survey_path(survey) %> </td>
     <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
   </tr>
 <% end %>
 </table>
