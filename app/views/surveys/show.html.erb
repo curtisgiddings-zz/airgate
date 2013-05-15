@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
   <h1> <%= @survey.name %></h1>
   <br>
-
+<div class = "container">
 <ol>
   <%=semantic_form_for @survey do |f| %>
     <% @questions.each do |question| %>
@@ -14,10 +14,12 @@
               <%if question.is_multiple_choice? %>
                 <%=response.input :content, :as => :radio, 
                                   :collection =>@answers,
-                                  :label => false %>
+                                  :label => false,
+                                  :required => true %>
                                   
               <%elsif question.is_short_answer? %>
-                <%=response.text_field :content%>
+                <%=response.text_field :content,
+                                       :required => true%>
 
               <%elsif question.is_long_answer? %>
                 <%=response.text_area :content, :size => "30x12"%>
@@ -37,5 +39,6 @@
     <%= f.submit "Continue to Internet" %>
   <% end %>
 </ol>
-<%= link_to 'Edit', edit_survey_path(@survey) %> |
-<%= link_to 'Back', surveys_path %>
+</div>
+<%= link_to 'Edit', edit_survey_path(@survey), :class => "btn btn-small btn-warning" %> |
+<%= link_to 'Back', surveys_path, :class => "btn btn-small"%>

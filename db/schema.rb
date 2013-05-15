@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429005544) do
+ActiveRecord::Schema.define(:version => 20130511212626) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130429005544) do
     t.datetime "updated_at",  :null => false
     t.integer  "router_type"
     t.integer  "user_id"
+    t.string   "router_ip"
   end
 
   create_table "users", :force => true do |t|
